@@ -14,11 +14,14 @@ ActiveRecord::Schema.define(version: 2021_01_06_164643) do
 
   create_table "posts", force: :cascade do |t|
     t.string "content"
+    t.string "user_id"
+    t.integer "favorite"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "email"
     t.string "name"
     t.string "bio"
     t.integer "age"

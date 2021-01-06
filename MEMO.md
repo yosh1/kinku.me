@@ -34,3 +34,21 @@ rails db:migrate:reset
 ```
 ls app/models
 ```
+
+## add data to db
+
+### create file db/seeds.rb
+
+```
+@user = User.new
+@user.name = 'Soushi Yamamoto'
+@user.username = 'soushiy'
+@user.location = 'Tokyo, Japan'
+@user.about = 'Hello, I am Soushi.'
+@user.save
+```
+
+
+```
+rake db:seed
+```

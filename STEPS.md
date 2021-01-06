@@ -47,3 +47,9 @@ $ rails server -b 0.0.0.0
 ```
 $ rails db:migrate
 ```
+
+## drop db
+
+```
+rails db:drop
+```
