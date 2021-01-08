@@ -18,6 +18,8 @@
       "docker:stop": "",
       "start": "rails server -b 0.0.0.0",
       "db:migrate": "rails db:migrate",
-      "db:reset": "rails db:migrate:reset && rm -rf ./public/uploads/**/*"
+      "db:reset": "rails db:migrate:reset && rm -rf ./public/uploads/**/*",
+      "heroku:commit": "git push heroku master",
+      "heroku:db": "heroku run rails db:migrate"
   }
 }
