@@ -1,0 +1,8 @@
+<div>
+  <h1>ユーザーを編集する</h1>
+  <%= form_for(@user) do |f| %>
+  <p><%= f.label :email , "メールアドレス"%></p>
+  <p><%= f.email_field :email %></p>
+  <p><%= f.submit "更新する", class: "btn btn-primary" %></p>
+  <% end %>
+</div>

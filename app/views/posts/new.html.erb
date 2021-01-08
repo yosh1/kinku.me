@@ -1,0 +1,10 @@
+<%= form_for([@user, @user.post.build]) do |f| %>
+    <div>
+        <%= f.label :content, "投稿内容"%>
+        <%= f.text_area :content, class: "materialize-textarea" %>
+        <%= f.label :image, '画像' %>
+        <br/>
+        <%= f.file_field :image, class: "file-field input-field" %>
+    </div>
+    <%= f.submit "投稿", class: "waves-effect waves-light btn", style: "margin-top:40px;" %>
+<% end %>

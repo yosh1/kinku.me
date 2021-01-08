@@ -1,0 +1,21 @@
+<nav>
+    <div class="nav-wrapper">
+        <%= link_to "ねこボード 🐾","/", class: "brand-logo center" %>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><%= link_to "タイムライン",posts_index_path %></li>
+            <% if logged_in? %>
+            <li><%= link_to "新規投稿",posts_new_path(:user_id=>current_user.id) %></li>
+            <li><%= link_to "ユーザーリスト",users_user_path %></li>
+            <% end %>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <% if logged_in? %>
+            <li><%= @current_user.email + "さんでログイン中"%></li>
+            <li><%= link_to "ログアウト",session_path(:id=>current_user.id),method: :delete %></li>
+            <% else %>
+            <li><%= link_to "ログイン",new_session_path %></li>
+            <li><%= link_to "新規登録",new_user_path %></li>
+            <% end %>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,15 @@
+  <div class="">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">登録情報</span>
+          <p><%= @user.email %></p>
+        </div>
+        <div class="card-action">
+          <a><%= link_to "Eメールアドレスを編集する",edit_user_path(@user) %></a>
+          <a><%= link_to "このユーザーを削除する",user_path(@user),method: :delete %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+            

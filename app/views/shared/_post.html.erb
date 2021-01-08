@@ -1,0 +1,36 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+});
+</script>
+<div class="row">
+    <% if @posts.size == 0 %>
+        <p>投稿はありません。今すぐあなたも投稿してみませんか？</p>
+        <% if logged_in? %>
+        <%= link_to "投稿画面へ",posts_new_path(:user_id=>current_user.id),class: "waves-effect waves-light btn" %>
+        <% else %>
+        <p>まずはログインしてください。</p>
+        <%= link_to "ログイン",new_session_path, class: "waves-effect waves-light btn" %>
+        <% end %>
+    <% end %>
+    <% @posts.each do |post| %>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <% if post.image %>
+                <%= image_tag(post.image.to_s) %>
+                <% else %>
+                <% end %>
+            <%# <span class="card-title"></span> %>
+            </div>
+            <div class="card-content">
+            <%= post.content %>
+            </div>
+            <div class="card-action">
+                <%= link_to "削除する",posts_destroy_path(:id=>post.id), data: { confirm: '削除しますか？'} %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>
