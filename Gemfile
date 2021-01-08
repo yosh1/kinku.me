@@ -61,5 +61,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'rmagick', :require => 'RMagick'
+# https://qiita.com/nojishio/items/0595695c8a8572165ccf
+gem 'rmagick'
 gem 'carrierwave', '~> 1.0'
