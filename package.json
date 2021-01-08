@@ -11,5 +11,13 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.1"
+  },
+  "scripts": {
+      "docker:start": "",
+      "docker:exec": "",
+      "docker:stop": "",
+      "start": "rails server -b 0.0.0.0",
+      "db:migrate": "rails db:migrate",
+      "db:reset": "rails db:migrate:reset && rm -rf ./public/uploads/**/*"
   }
 }

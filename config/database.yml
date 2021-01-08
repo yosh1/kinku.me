@@ -20,6 +20,9 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# https://qiita.com/kazukimatsumoto/items/a0daa7281a3948701c39
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
