@@ -118,8 +118,6 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.server_static_files = true
-  config.consider_all_requests_local = false
-  config.assets.compile = true
 
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   if ENV["RAILS_LOG_TO_STDOUT"].present?
