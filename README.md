@@ -1,24 +1,49 @@
-# README
+# neko board
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+!()[https://github.com/yosh1/neko-board/blob/master/app/assets/images/ogp.png?raw=true]
 
-Things you may want to cover:
+---
 
-* Ruby version
+## How to run
 
-* System dependencies
+### docker create
 
-* Configuration
+```
+$ docker run -itd -v $PWD:/home -w /home -p 127.0.0.1:3001:3001 --name <NAME> ruby /bin/bash
+```
 
-* Database creation
+### docker start
 
-* Database initialization
+```
+$ docker start <NAME>
+```
 
-* How to run the test suite
+### docker exec
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ docker exec -it <NAME> /bin/bash
+```
 
-* Deployment instructions
+### pakcage install
 
-* ...
+```
+# apt-get # ...(something)
+```
+
+### change dir
+
+```
+# cd /<NAME>
+```
+
+### bundle install
+
+```
+$ bundle install
+```
+
+### rails serve
+
+```
+# rails server -b 0.0.0.0
+```
