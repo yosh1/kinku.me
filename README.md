@@ -1,6 +1,6 @@
 # neko board
 
-!()[https://github.com/yosh1/neko-board/blob/master/app/assets/images/ogp.png?raw=true]
+<img src="https://github.com/yosh1/neko-board/blob/master/app/assets/images/ogp.png?raw=true" width="100%" />
 
 ---
 
